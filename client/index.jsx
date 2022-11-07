@@ -16,21 +16,54 @@ function Application() {
 }
 
 function ChatApplication({ username }) {
+  const [message, setNewMessage] = useState("");
+  const [chatLog, setChatlog] = useState([
+    { author: "Sebastian", message: "Hello World" },
+    { author: "Vegis", message: "Hello you" },
+    { author: "Bogdan", message: "Hello me" },
+  ]);
+
   function handleNewMessageSubmit(e) {
     e.preventDefault();
+
+    setChatlog([
+      ...chatLog,
+      {
+        author: username,
+        message: message,
+      },
+    ]);
+
+    setNewMessage("");
   }
 
   return (
     <>
       <header>Chat Application - {username}</header>
-      <main>Main</main>
+      <main>
+        {chatLog.map((chat, index) => (
+          <ChatElement chat={chat} key={index}></ChatElement>
+        ))}
+      </main>
       <footer>
         <form onSubmit={handleNewMessageSubmit}>
-          <input type="text" />
+          <input
+            value={message}
+            onChange={(e) => setNewMessage(e.target.value)}
+            type="text"
+          />
           <button>Submit</button>
         </form>
       </footer>
     </>
+  );
+}
+
+function ChatElement({ chat: { author, message } }) {
+  return (
+    <div>
+      <strong>{author}</strong>: {message}
+    </div>
   );
 }
 
