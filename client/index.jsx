@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { createRoot } from "react-dom/client";
 
@@ -16,6 +16,14 @@ function Application() {
 }
 
 function ChatApplication({ username }) {
+  const [webSocket, setWebSocket] = useState();
+
+  useEffect(() => {
+    const ws = new WebSocket("ws://localhost:3000");
+
+    setWebSocket(ws);
+  }, []);
+
   const [message, setNewMessage] = useState("");
   const [chatLog, setChatlog] = useState([
     { author: "Sebastian", message: "Hello World" },
