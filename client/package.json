@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "parcel watch index.html",
     "build": "npm ci --include=dev && parcel build index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\""
   },
   "keywords": [],
   "author": "",
