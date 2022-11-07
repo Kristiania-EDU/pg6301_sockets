@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/Kristiania-EDU/pg6301_sockets#readme",
   "dependencies": {
-    "concurrently": "^7.5.0"
+    "concurrently": "^7.5.0",
+    "prettier": "^2.7.1"
   }
 }
