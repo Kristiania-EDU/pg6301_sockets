@@ -12,7 +12,26 @@ function Application() {
     return <Login onLogin={(username) => setUsername(username)}></Login>;
   }
 
-  return <div>Hello {username}</div>;
+  return <ChatApplication username={username}></ChatApplication>;
+}
+
+function ChatApplication({ username }) {
+  function handleNewMessageSubmit(e) {
+    e.preventDefault();
+  }
+
+  return (
+    <>
+      <header>Chat Application - {username}</header>
+      <main>Main</main>
+      <footer>
+        <form onSubmit={handleNewMessageSubmit}>
+          <input type="text" />
+          <button>Submit</button>
+        </form>
+      </footer>
+    </>
+  );
 }
 
 function Login({ onLogin }) {

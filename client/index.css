@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+}
+
+#app {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+}
+
+main {
+
+}
+
+footer {
+    padding: .5em;
+}
+
+footer form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5em;
+}
+
+footer form input {
+    flex: 1;
+}

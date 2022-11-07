@@ -1,6 +1,6 @@
 * [X] Create React and Express application
-* [ ] Deploy to Azure
-* [ ] Register username
+* [X] Deploy to Azure
+* [X] Register username
 * [ ] View for chat log and new chat message
 * [ ] Chat messages updates chat log locally
 * [ ] Connect client to websocket on server
