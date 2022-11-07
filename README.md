@@ -1,4 +1,4 @@
-* [ ] Create React and Express application
+* [X] Create React and Express application
 * [ ] Deploy to Azure
 * [ ] Register username
 * [ ] View for chat log and new chat message
